@@ -24,8 +24,8 @@ def install_neuron(get_latest=False):
             os.chdir('nrn')
             
         path = os.getcwd()
-        pyexec = sys.executable
-        co(["./configure --prefix=%s --without-iv --with-nrnpython=%s"%(path,pyexec)], shell=True)
+        pyexec = 'python2' #sys.executable
+        co(["./configure --prefix=%s --without-iv --without-paranrn --with-nrnpython=%s"%(path,pyexec)], shell=True)
         print(co(['make']))
         print(co(['make', 'install']))
 
