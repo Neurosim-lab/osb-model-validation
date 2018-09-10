@@ -89,7 +89,7 @@ def main():
                 from engines.neuron_ import NeuronEngine
                 if not NeuronEngine.is_installed(''):
                     from engines.getnrn import install_neuron
-                    install_neuron()
+                    install_neuron(get_latest=True)
                 else:
                     already_installed = True
                     
