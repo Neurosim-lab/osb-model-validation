@@ -14,7 +14,7 @@ def install_neuron(get_latest=False):
     os.mkdir(nrnpath)
     with working_dir(nrnpath):
         if get_latest:
-            print(co(['hg', 'clone', 'http://www.neuron.yale.edu/hg/neuron/nrn']))
+            print(co(['git', 'clone', 'https://github.com/neuronsimulator/nrn']))
             os.chdir('nrn')
             print(co(['./build.sh']))
         else:
