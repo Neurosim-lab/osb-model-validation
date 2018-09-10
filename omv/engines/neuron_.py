@@ -78,7 +78,7 @@ class NeuronEngine(OMVEngine):
         cls.environment_vars, cls.path = NeuronEngine.get_nrn_environment()
         
         inform('Will fetch and install the latest NEURON version', indent=2)
-        getnrn.install_neuron()
+        getnrn.install_neuron(get_latest=True)
 
 
     @classmethod
